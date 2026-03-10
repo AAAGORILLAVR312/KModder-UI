@@ -1,1 +1,9 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/USERNAME/REPO/main/MyUILibrary.lua"))()
+local Window = require(script.Parent.Window)
+
+local Library = {}
+
+function Library:CreateWindow(name)
+    return Window.new(name)
+end
+
+return Library
