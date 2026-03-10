@@ -1,9 +1,15 @@
-local Window = require(script.Parent.Window)
-
 local Library = {}
 
+Library.Window = loadstring(game:HttpGet(
+"https://raw.githubusercontent.com/AAAGORILLAVR312/KModder-UI/main/elements/window.lua"
+))()
+
+Library.Tab = loadstring(game:HttpGet(
+"https://raw.githubusercontent.com/AAAGORILLAVR312/KModder-UI/main/elements/tab.lua"
+))()
+
 function Library:CreateWindow(name)
-    return Window.new(name)
+    return Library.Window.new(name)
 end
 
 return Library
